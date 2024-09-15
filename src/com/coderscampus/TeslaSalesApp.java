@@ -1,6 +1,7 @@
 package com.coderscampus;
 
 import java.io.BufferedReader;
+
 import java.time.YearMonth;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class TeslaSalesAnalytics {
+public class TeslaSalesApp {
 	
 	private static List<TeslaSalesData> readSalesData(String filePath) {
 		List<TeslaSalesData> salesDataList = new ArrayList<>();
@@ -36,9 +37,11 @@ public class TeslaSalesAnalytics {
 
 	public static void main(String[] args) {
 		
-		String model3Path = "/Users/jaecaramelsmith/Desktop/model3.csv";
-		String modelSPath = "/Users/jaecaramelsmith/Desktop/modelS.csv";
-		String modelXPath = "/Users/jaecaramelsmith/Desktop/modelX.csv";
+		String model3Path = "model3.csv";
+		String modelSPath = "modelS.csv";
+		String modelXPath = "modelX.csv";
+		
+		FileService fileService = new FileService();
 		
 		List<TeslaSalesData> model3Sales = readSalesData(model3Path);
 		List<TeslaSalesData> modelSSales = readSalesData(modelSPath);
